@@ -81,22 +81,30 @@ input::placeholder {
     font: inherit;
 }
 
-h1,h2,h3,h4{
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Poppins';
 }
-h1{
+
+h1 {
     font-size: calc(1.3rem + 1vw);
     font-weight: var(--fw8);
-    line-height: 1;;
+    line-height: 1;
+    ;
 }
-h2{
+
+h2 {
     font-size: 2.5rem;
 }
-h3{
+
+h3 {
     font-size: 1.2em;
     font-weight: var(--fw7);
 }
-h4{
+
+h4 {
     font-size: 1.2rem;
     font-weight: var(--fw6);
 }
@@ -105,10 +113,11 @@ h4{
 * Reusable Selector
 */
 
-.container{
-    min-width: 1280px;
+.container {
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 0.938em;
+    /* border: 1px solid red; */
 }
 
 .column {
@@ -119,46 +128,58 @@ h4{
 .column .row {
     padding: 0 0.938em;
 }
-.flexwarp{
+
+.flexwarp {
     display: flex;
     flex-wrap: wrap;
 }
+
 .flexcenter {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .flexitem {
     display: flex;
     align-items: center;
 }
+
 .flexcol {
     display: flex;
     flex-direction: column;
     gap: 1em;
 }
-.main-links a:hover{
+
+.main-links a:hover {
     color: var(--secondary-color);
 }
-.second-links a:hover{
+
+.second-links a:hover {
     color: var(--light-text-color);
     /* color: red; */
 }
 
-.icon-small, .icon-large{
+.icon-small,
+.icon-large {
     display: flex;
     align-items: center;
     padding: 0 0.25em;
     font-weight: normal;
 }
-.icon-small{
+
+.icon-small {
     font-size: 1.75em;
     margin: auto;
 }
 
-.icon-large{
+.icon-large {
     font-size: 1.75em;
     margin: auto;
+}
+
+.mobile-hide {
+    display: none;
 }
 
 
@@ -212,7 +233,7 @@ h4{
  * 01. HEADER
 *------------------*/
 
-header li > a {
+header li>a {
     display: flex;
     position: relative;
     line-height: inherit;
@@ -223,15 +244,20 @@ header li > a {
  * 01. HEADER
   a. Header Top
 *------------------*/
+/* .header-top {
+    background-color: red;
+} */
 
 .header-top .wrapper {
     font-size: var(--font-small);
+    width: 100%;
     font-weight: var(--fw5);
     justify-content: space-between;
     line-height: 42px;
+    /* border: 1px solid red; */
 }
 
-.header-top .wrapper  ul {
+.header-top .wrapper ul {
     gap: 2em;
 }
 
@@ -256,6 +282,7 @@ header li > a {
 .header-top .right ul ul li.current a {
     background-color: var(--border-color);
 }
+
 .header-top li:hover ul {
     display: block;
 }
@@ -265,31 +292,42 @@ header li > a {
  * 01. HEADER
     b. Header Nav
 *------------------*/
+.header-nav {
+    padding: 0.5em 0;
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid var(--border-color);
+}
+
 .trigger {
     font-size: 1.5em;
     display: flex;
     padding: 0.25em;
     margin-right: 0.5em;
 }
+
+
+
 .logo a {
     font-family: 'Poppins';
     font-size: 1.75em;
     position: relative;
     font-weight: var(--fw8);
     padding-left: 0.75em;
-    margin-right: 2em; 
+    margin-right: 2em;
 }
+
 .circle {
     position: absolute;
     top: -15px;
     left: 0;
     width: 38px;
-    height: 38px; 
+    height: 38px;
     border-radius: var(--percent50);
     background-color: var(--light-bg-color);
     z-index: -1;
-   
+
 }
+
 .circle::before {
     content: '';
     position: absolute;
@@ -301,21 +339,23 @@ header li > a {
     right: 5px;
     opacity: .4;
 }
-.header-nav nav > ul {
+
+.header-nav nav>ul {
     line-height: 100px;
     gap: 2em;
 }
 
-.fly-item{
-  position: absolute;  
-  height: 16px;
-  font-size: var(--font-smaller);
-  padding: 3px;
-  text-align: center;
-  line-height: 10px;
-  color: var(--white-color);
+.fly-item {
+    position: absolute;
+    height: 16px;
+    font-size: var(--font-smaller);
+    padding: 3px;
+    text-align: center;
+    line-height: 10px;
+    color: var(--white-color);
 
 }
+
 nav .fly-item {
     top: 50%;
     margin-top: -24px;
@@ -341,17 +381,56 @@ nav .fly-item {
     background-color: var(--secondary-dark-color);
     border-radius: var(--percent50);
 }
+.mega .flexcol {
+    border: 1px solid red;
+    min-width: 180px;
+    padding-right: 2.5em;
+    margin-bottom: 1.5em;
+    z-index: 1;
+}
+
 /*-----------------
  * 15. RESPOSVIVE
 *------------------*/
 
 
 
-@media screen and (min-width: 992px){
-    .container{
+@media only screen and (min-width: 992px) {
+    .container {
         padding: 0 2em;
     }
-    .desktop-hide{
+
+    .desktop-hide {
         display: none;
+    }
+
+    .mobile-hide {
+        display: block;
+    }
+
+    .logo a {
+        margin-right: 2em;
+    }
+
+    .header-nav {
+        padding: 0;
+        margin: 0;
+        border-bottom: 0;
+
+    }
+
+    .header-nav .right li>a {
+        margin-left: 1em;
+    }
+
+    /* mega menu  */
+    nav .mega{
+        border: 1px solid blue;
+        position: absolute;
+        width: var(--percent100);
+        height: auto;
+        top: auto;
+        left: 0;
+        right: 0;
     }
 }
