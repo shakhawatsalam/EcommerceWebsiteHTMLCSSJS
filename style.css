@@ -246,6 +246,11 @@ h4 {
     transition: var(--trans-color);
 }
 
+.mini-text{
+    font-size: var(--font-smaller);
+    color: var(--light-text-color);
+}
+
 /*
  *Structure Style
 
@@ -307,9 +312,7 @@ header li>a {
  * 01. HEADER
   a. Header Top
 *------------------*/
-/* .header-top {
-    background-color: red;
-} */
+
 
 .header-top .wrapper {
     font-size: var(--font-small);
@@ -452,6 +455,68 @@ nav .fly-item {
     margin-bottom: 1.5em;
     z-index: 1;
 }
+/*-----------------
+ * 01. HEADER
+    c. Header main, Department Category
+*------------------*/
+.header-main{
+    border: 1px solid red;
+    background-color: var(--secondary-dark-color);
+    padding: 1.5em 0;
+    margin-bottom: 2em;
+}
+.dpt-cat{
+    border: 1px solid yellow;
+    position: relative;
+    z-index: 10;
+}
+.dpt-cat .dpt-head{
+    border: 1px solid red;
+    position: relative;
+    width: 300px;
+    padding: 0.75em 1.5em;
+    background-color: var(--primary-color);
+    border-radius: 7px 7px 0 0;
+    color: var(--white-color);
+    margin-bottom: -2.15em;
+}
+.dpt-cat .dpt-head .mini-text {
+    border: 1px solid green;
+    color: var(--light-bg-color);
+}
+.dpt-cat .dpt-trigger{
+    border: 1px solid green;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1.3em;
+    height: 60px;
+    width: 60px;
+
+}
+
+/*-----------------
+ * 01. HEADER
+    d. Search Form
+*------------------*/
+
+.header-main .right {
+    flex: 1;
+}
+form{
+    position: relative;
+}
+form.search input {
+    line-height: 3.25em;
+    padding: 0 7em;
+    border: 0;
+    outline: 0;
+    width: var(--percent100);
+    border-radius: 7px;
+    font-size: 0.9em;
+    font-weight: var(--fw3);
+}
+
 
 /*-----------------
  * 15. RESPOSVIVE
