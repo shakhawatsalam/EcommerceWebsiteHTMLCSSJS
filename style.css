@@ -302,8 +302,9 @@ h4 {
  * 01. HEADER
 *------------------*/
 
-header li>a {
+:where(.off-canvas, header) li>a {
     display: flex;
+    /* border: 1px solid red; */
     position: relative;
     line-height: inherit;
     transition: var(--trans-color);
@@ -342,11 +343,11 @@ header li>a {
     display: none;
 }
 
-.header-top .right ul ul li a {
+:where(.header-top, .thetop-nav) .right ul ul li a {
     padding: 0.25em 1em;
 }
 
-.header-top .right ul ul li.current a {
+:where(.header-top, .thetop-nav) .right ul ul li.current a {
     background-color: var(--border-color);
 }
 
@@ -572,8 +573,121 @@ form.search button:hover {
  * 01. HEADER
     e. Responsive MENU - OFF canvas
 *------------------*/
+.site-off{
+    border: 1px solid red;
+    position: fixed;
+    width: 320px;
+    height: 100%;
+    background-color: var(--white-color);
+    overflow-y: auto;
+    z-index: 1000;
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: transform .4s, visibility .4s;
+    will-change: transform, visibility ;
+}
+.off-canvas{
+    border: 1px solid red;
+    width: var(--percent100);
+    height: var(--percent100);
+    touch-action: pan-x;
+    padding: 1.5em;
+}
+.off-canvas .canvas-head{
+    border: 1px solid red;
+    color: var(--white-color);
+    justify-content: space-between;
+    padding: 1.5em;
+    margin: -1.5em -1.5em 1.5em;
+    background-color: var(--secondary-dark-color);
+    border-bottom-right-radius: 160px 25px;
+}
+.off-canvas .canvas-head .logo{
+    z-index: 10;
+    position: relative;
+}
+.off-canvas .canvas-head .logo .circle {
+    opacity: .75;
+}
+.t-close {
+    font-size: 1.25em;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--percent50);
+    background-color: var(--secondary-dark-color);
+    color: var(--white-color);
+    transition: var(--trans-background-color);
+}
+.t-close:hover {
+    background-color: var(--white-color);
+    color: var(--secondary-dark-color);
+    opacity: .75;
+}
+.off-canvas .dpt-head{
+    font-size: var(--font-small);
+    padding: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    background-color: var(--light-bg-color);
+    border-radius: 7px 7px 0 0;
+}
 
+.off-canvas .has-child > :where(ul, .mega){
+    font-size: var(--font-small);
+    font-weight: var(--fw3);
+    line-height: 28px;
+    padding-left : 3em;
 
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.off-canvas .expand > :where(ul, .mega){
+    max-height: 2000px;
+}
+.off-canvas .thetop-nav ul, .off-canvas nav > ul {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: var(--font-small);
+    line-height: 36px;
+    padding-top: 1.25em;
+    margin: 1.25em 0;
+    border-top: 1px solid  var(--border-color);
+}
+.off-canvas nav .mega {
+    padding: 0;
+}
+.off-canvas nav .mega .products{
+    display: none;
+}
+.off-canvas .has-child .icon-small{
+    border: 1px solid red;
+    padding: 0.5em;
+    line-height: initial;
+}
+.off-canvas .dpt-menu .icon-small i {
+    transform: rotate(90deg);
+}
+.off-canvas .has-child{
+    border: 1px solid red;
+    width: var(--percent100);
+}
+.off-canvas .thetop-nav .right > ul > :where(:nth-child(4), li:nth-child(5)) > a{
+    border: 1px solid yellow;
+    display: none;
+}
+.off-canvas .thetop-nav .right ul ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.off-canvas .thetop-nav .right ul ul li a {
+    padding: 0.5em;
+    border: 1px solid var(--border-color);
+    line-height: 16px;
+    margin: 0 0.5em 0.5em 0;
+}
 /*-----------------
  * 15. RESPOSVIVE
 *------------------*/
