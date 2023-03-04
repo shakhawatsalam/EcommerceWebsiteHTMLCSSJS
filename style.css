@@ -510,10 +510,12 @@ nav .fly-item {
     height: 46px;
     align-items: center;
 }
+
 .dpt-menu .has-child:hover ul {
     display: block;
 }
-.dpt-menu .has-child li a:hover{
+
+.dpt-menu .has-child li a:hover {
     text-decoration: underline;
 }
 
@@ -573,8 +575,8 @@ form.search button:hover {
  * 01. HEADER
     e. Responsive MENU - OFF canvas
 *------------------*/
-.site-off{
-    border: 1px solid red;
+.site-off {
+    /* border: 1px solid red; */
     position: fixed;
     width: 320px;
     height: 100%;
@@ -584,17 +586,25 @@ form.search button:hover {
     transform: translateX(-100%);
     visibility: hidden;
     transition: transform .4s, visibility .4s;
-    will-change: transform, visibility ;
+    will-change: transform, visibility;
 }
-.off-canvas{
-    border: 1px solid red;
+
+.showmenu .site-off {
+    transform: translateX(0);
+    visibility: visible;
+    transform: transform .4s 0s, visibility 0s 0s;
+}
+
+.off-canvas {
+    /* border: 1px solid red; */
     width: var(--percent100);
     height: var(--percent100);
     touch-action: pan-x;
     padding: 1.5em;
 }
-.off-canvas .canvas-head{
-    border: 1px solid red;
+
+.off-canvas .canvas-head {
+    /* border: 1px solid red; */
     color: var(--white-color);
     justify-content: space-between;
     padding: 1.5em;
@@ -602,13 +612,16 @@ form.search button:hover {
     background-color: var(--secondary-dark-color);
     border-bottom-right-radius: 160px 25px;
 }
-.off-canvas .canvas-head .logo{
+
+.off-canvas .canvas-head .logo {
     z-index: 10;
     position: relative;
 }
+
 .off-canvas .canvas-head .logo .circle {
     opacity: .75;
 }
+
 .t-close {
     font-size: 1.25em;
     width: 32px;
@@ -618,12 +631,14 @@ form.search button:hover {
     color: var(--white-color);
     transition: var(--trans-background-color);
 }
+
 .t-close:hover {
     background-color: var(--white-color);
     color: var(--secondary-dark-color);
     opacity: .75;
 }
-.off-canvas .dpt-head{
+
+.off-canvas .dpt-head {
     font-size: var(--font-small);
     padding: 1em;
     margin-bottom: 1em;
@@ -632,51 +647,61 @@ form.search button:hover {
     border-radius: 7px 7px 0 0;
 }
 
-.off-canvas .has-child > :where(ul, .mega){
+.off-canvas .has-child> :where(ul, .mega) {
     font-size: var(--font-small);
     font-weight: var(--fw3);
     line-height: 28px;
-    padding-left : 3em;
+    padding-left: 3em;
 
     height: auto;
     max-height: 0;
     overflow: hidden;
     transition: max-height .3s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
-.off-canvas .expand > :where(ul, .mega){
+
+.off-canvas .expand> :where(ul, .mega) {
     max-height: 2000px;
 }
-.off-canvas .thetop-nav ul, .off-canvas nav > ul {
+
+.off-canvas .thetop-nav ul,
+.off-canvas nav>ul {
     flex-direction: column;
     align-items: flex-start;
     font-size: var(--font-small);
     line-height: 36px;
     padding-top: 1.25em;
     margin: 1.25em 0;
-    border-top: 1px solid  var(--border-color);
+    border-top: 1px solid var(--border-color);
 }
+
 .off-canvas nav .mega {
     padding: 0;
 }
-.off-canvas nav .mega .products{
+
+.off-canvas nav .mega .products {
     display: none;
 }
-.off-canvas .has-child .icon-small{
-    border: 1px solid red;
+
+.off-canvas .has-child .icon-small {
+    /* border: 1px solid red; */
     padding: 0.5em;
     line-height: initial;
 }
+
 .off-canvas .dpt-menu .icon-small i {
     transform: rotate(90deg);
 }
-.off-canvas .has-child{
-    border: 1px solid red;
+
+.off-canvas .has-child {
+    /* border: 1px solid red; */
     width: var(--percent100);
 }
-.off-canvas .thetop-nav .right > ul > :where(:nth-child(4), li:nth-child(5)) > a{
-    border: 1px solid yellow;
+
+.off-canvas .thetop-nav .right>ul> :where(:nth-child(4), li:nth-child(5))>a {
+    /* border: 1px solid yellow; */
     display: none;
 }
+
 .off-canvas .thetop-nav .right ul ul {
     display: flex;
     flex-direction: row;
@@ -688,6 +713,7 @@ form.search button:hover {
     line-height: 16px;
     margin: 0 0.5em 0.5em 0;
 }
+
 /*-----------------
  * 15. RESPOSVIVE
 *------------------*/
@@ -896,7 +922,8 @@ form.search button:hover {
         width: auto;
         min-width: var(--percent100);
     }
-    .dpt-menu .has-child:hover .mega{
+
+    .dpt-menu .has-child:hover .mega {
         display: flex;
     }
 }
