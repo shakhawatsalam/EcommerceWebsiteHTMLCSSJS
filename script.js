@@ -23,8 +23,8 @@ copyMenu();
 
 // show mobile menu
 const menuButton = document.querySelector('.trigger'),
-     closeButton = document.querySelector('.t-close'),
-     addclass = document.querySelector('.site');
+    closeButton = document.querySelector('.t-close'),
+    addclass = document.querySelector('.site');
 
 menuButton.addEventListener('click', function (e) {
     e.preventDefault();
@@ -49,3 +49,11 @@ function toggle(e) {
     this.closest('.has-child').classList.toggle('expand')
 }
 
+// slider
+const swiper = new Swiper('.swiper', {
+    loop: true,
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+});
