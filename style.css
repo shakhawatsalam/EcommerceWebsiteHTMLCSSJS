@@ -1105,7 +1105,35 @@ form.search button:hover {
 .banners .primary-button {
     z-index: 3;
 }
+.banners .product-categories .item {
+    display: flex;
+    padding: 1.5em;
+}
+.banners .product-categories .image {
+    max-width: 150px;
+}
+.mini-links ul{
+    font: var(--font-small);
+    color: var(--light-text-color);
+    margin-top: 1em;
+}
+.banners .second-links {
+    border: 1px solid red;
+    margin-top: 2em;
+}
+.mini-links li a:hover {
+    text-decoration: underline;
+}
 
+/*-----------------
+ * Product catagory
+*------------------*/
+/* .product-categories .item{
+    margin-top: 3em;
+        position: relative;
+        background-color: var(--white-color);
+        border: 1px solid var(--border-color);m;
+} */
 /*-----------------
  * 15. RESPOSVIVE
 *------------------*/
@@ -1343,7 +1371,8 @@ form.search button:hover {
     }
 
     /* products */
-    .trending .products {
+    .trending .products,
+    .product-categories .row{
         flex: 0 0 33.3333%;
     }
 
