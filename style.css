@@ -1135,6 +1135,13 @@ form.search button:hover {
         border: 1px solid var(--border-color);m;
 } */
 /*-----------------
+ * 15. FOOTER
+    a. News Letter
+*------------------*/
+.newsletter{
+    
+}
+/*-----------------
  * 15. RESPOSVIVE
 *------------------*/
 @media screen and (min-width: 481px) {
