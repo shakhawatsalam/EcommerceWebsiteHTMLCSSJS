@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Rubik:wght@300;400;500;600&display=swap');
-
+/* root for styleing  star's*/
 :root {
     --primary-color: #ff6b6b;
     --secondary-color: #794afa;
@@ -31,7 +31,8 @@
     --trans-color: color .3s;
 
 }
-
+/* root for styleing  end's*/
+/* COMMON STYLE FOR EVERY CSS FILE START'S  */
 * {
     padding: 0;
     margin: 0;
@@ -40,9 +41,11 @@
 *,
 ::before,
 ::after {
+    /* background-color: white; */
     box-sizing: border-box;
 }
-
+/* COMMON STYLE FOR EVERY CSS FILE START'S  */
+/* STYLE FO HOLE BODY START'S  */
 body {
     font-family: 'Rubik', sans-serif;
     font-weight: 16px;
@@ -51,73 +54,75 @@ body {
     color: var(--dark-color);
     background-color: var(--white-color);
 }
+/* STYLE FO HOLE BODY START'S  */
 
+/* COMMON STYLE OF ALL a TAG  */
 a {
     text-decoration: none;
     color: inherit;
     -webkit-tap-highlight-color: transparent;
 }
 
+/* COMMON STYLE OF ALL ul TAG  */
 ul {
     list-style: none;
 
 }
-
+/* COMMON STYLE OF ALL img TAG  */
 img {
     max-width: var(--percent100);
     vertical-align: middle;
 }
-
+/* COMMON STYLE OF ALL strong TAG  */
 strong {
     font-weight: var(--fw8);
 }
-
+/* COMMON STYLE OF ALL table TAG  */
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-
+/* COMMON STYLE OF ALL input::placeholder TAG  */
 input::placeholder {
     font: inherit;
 }
-
+/* COMMON FONT'S FOR H1, H2, H3, H4 */
 h1,
 h2,
 h3,
 h4 {
     font-family: 'Poppins';
 }
-
+/* COMMON STYLE FOR H1, TAG */
 h1 {
     font-size: calc(1.3rem + 1vw);
     font-weight: var(--fw8);
     line-height: 1;
     ;
 }
-
+/* COMMON STYLE FOR H2 TAG */
 h2 {
     font-size: 2.5rem;
 }
-
+/* COMMON STYLE FOR H2 TAG */
 h3 {
     font-size: 1.2em;
     font-weight: var(--fw7);
 }
-
+/* COMMON STYLE FOR H3 TAG */
 h4 {
     font-size: 1.2rem;
     font-weight: var(--fw6);
 }
 
 /**
-* Reusable Selector
+* REUSABLE SELECTOR START
 */
 
 .container {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 0.938em;
-    /* border: 1px solid red; */
 }
 
 .column {
@@ -190,7 +195,7 @@ h4 {
     height: var(--percent100);
     display: block;
 }
-
+/* COMMON STYLE OF ALL PRODUCT'S IMAGE DIV */
 .products .media {
     /* border: 1px solid red; */
     width: 100%;
@@ -199,7 +204,7 @@ h4 {
     flex-shrink: 0;
     overflow: hidden;
 }
-
+/* COMMON STYLE OF ALL BUTTON  */
 .primary-button,
 .secondary-button,
 .light-button {
@@ -239,14 +244,15 @@ h4 {
     background-color: var(--secondary-dark-color);
     color: var(--white-color);
 }
-
+/* COMMON STYLE OF ALL BUTTON  */
+/* STYLE OF VIEW ALL  */
 .view-all {
     font-size: var(--font-small);
     display: flex;
     gap: 1em;
     transition: var(--trans-color);
 }
-
+/* STYLE FOR SMALL TEXT  */
 .mini-text {
     font-size: var(--font-smaller);
     color: var(--light-text-color);
@@ -301,7 +307,7 @@ h4 {
 /*-----------------
  * 01. HEADER
 *------------------*/
-
+/* STYLE FOR MENU LINK LIKE HOME, SHOP, BEAUTY , AND ALSO MEGA MENU LINKS  */
 :where(.off-canvas, header) li>a {
     display: flex;
     /* border: 1px solid red; */
@@ -315,7 +321,7 @@ h4 {
   a. Header Top
 *------------------*/
 
-
+/* STYLE FOR HEADER TO WRAPPER WHICH IS INTO THE CONTAINER  */
 .header-top .wrapper {
     font-size: var(--font-small);
     width: 100%;
@@ -324,15 +330,17 @@ h4 {
     line-height: 42px;
     /* border: 1px solid red; */
 }
-
+/* HEADER TOP ul STYLE  */
 .header-top .wrapper ul {
+    /* border: 1px solid red; */
     gap: 2em;
 }
-
+/* HEADER TOP li STYLE  */
 .header-top li {
+        /* border: 1px solid red; */
     position: relative;
 }
-
+/* THIS STYLE FOR USD AND ENGLISH  */
 .header-top ul ul {
     position: absolute;
     left: -1em;
@@ -342,15 +350,16 @@ h4 {
     z-index: 1;
     display: none;
 }
-
+/* THIS STYLE FOR USD AND ENGLISH  */
 :where(.header-top, .thetop-nav) .right ul ul li a {
     padding: 0.25em 1em;
 }
-
+/* THIS STYLE FOR USD AND ENGLISH  */
 :where(.header-top, .thetop-nav) .right ul ul li.current a {
     background-color: var(--border-color);
 }
 
+/* THIS STYLE FOR SHOWING THE OTHER OPTIONS USD AND ENGLISH  */
 .header-top li:hover ul {
     display: block;
 }
@@ -360,12 +369,14 @@ h4 {
  * 01. HEADER
     b. Header Nav
 *------------------*/
+/* THIS STYLE IS WORKING ON MOBILE ONLY  */
 .header-nav {
+    /* border: 1px solid red; */
     padding: 0.5em 0;
     margin-bottom: 1.5em;
     border-bottom: 1px solid var(--border-color);
 }
-
+/* THIS STYLE OF MOBILE BREDCRUM  */
 .trigger {
     font-size: 1.5em;
     display: flex;
@@ -374,8 +385,9 @@ h4 {
 }
 
 
-
+/* FOR LOGO STYLE  */
 .logo a {
+    /* border: 1px solid red; */
     font-family: 'Poppins';
     font-size: 1.75em;
     position: relative;
@@ -383,8 +395,9 @@ h4 {
     padding-left: 0.75em;
     margin-right: 2em;
 }
-
+/* FOR LOGO circle  */
 .circle {
+    /* border: 1px solid red; */
     position: absolute;
     top: -15px;
     left: 0;
@@ -395,7 +408,7 @@ h4 {
     z-index: -1;
 
 }
-
+/* FOR LOGO CIRCLE  */
 .circle::before {
     content: '';
     position: absolute;
@@ -407,12 +420,13 @@ h4 {
     right: 5px;
     opacity: .4;
 }
-
+/* FOR HEADER NAV HOME SHOP WOMEN  */
 .header-nav nav>ul {
+    /* border: 1px solid red; */
     line-height: 100px;
     gap: 2em;
 }
-
+/* THIS STYLE FOR SHORT NOTIFICATION .logo */
 .fly-item {
     position: absolute;
     height: 16px;
@@ -423,7 +437,7 @@ h4 {
     color: var(--white-color);
 
 }
-
+/* THIS IS FOR NAV SPORTS FLY ITEM   */
 nav .fly-item {
     top: 50%;
     margin-top: -24px;
@@ -432,16 +446,16 @@ nav .fly-item {
     right: -32px;
     background-color: var(--primary-color);
 }
-
+/* THIS STYLE FOR CART AND WISH LOVE ITEM   */
 .header-nav .right {
     position: relative;
     margin-left: auto;
 }
-
+/* THIS STYLE FOR CART AND WISH LOVE ITEM   ICON */ 
 .header-nav .right .icon-large {
     position: relative;
 }
-
+/* THIS STYLE FOR CART AND WISH LOVE ITEM   ICON'S FLY ITEM */
 .header-nav .right .fly-item {
     top: 0;
     right: 16px;
@@ -449,7 +463,7 @@ nav .fly-item {
     background-color: var(--secondary-dark-color);
     border-radius: var(--percent50);
 }
-
+/* WOMEN MEGA STYLE COLUM  */
 .mega .flexcol {
     /* border: 1px solid red; */
     min-width: 180px;
@@ -462,13 +476,14 @@ nav .fly-item {
  * 01. HEADER
     c. Header main, Department Category
 *------------------*/
+/* ALL DEPARTMENT AND SEARCH SECTION */
 .header-main {
     /* border: 1px solid red; */
     background-color: var(--secondary-dark-color);
     padding: 1.5em 0;
     margin-bottom: 2em;
 }
-
+/* STYLE FOR ALL DEPARTMENT SECTION  */
 .dpt-cat {
     /* border: 1px solid yellow; */
     position: relative;
@@ -478,6 +493,8 @@ nav .fly-item {
 /* .dpt-menu > ul > li{
     border: 2px solid red;
 } */
+
+/* STYLE FOR ALL DEPARTMENT SECTION  HEAD SECTION*/
 .dpt-cat .dpt-head {
     /* border: 1px solid red; */
     position: relative;
@@ -488,12 +505,12 @@ nav .fly-item {
     color: var(--white-color);
     margin-bottom: -2.15em;
 }
-
+/* STYLE FOR ALL DEPARTMENT SECTION  MINI - TEXT*/
 .dpt-cat .dpt-head .mini-text {
     /* border: 1px solid green; */
     color: var(--light-bg-color);
 }
-
+/* STYLE FOR ALL DEPARTMENT SECTION  BREAD CURM*/
 .dpt-cat .dpt-trigger {
     /* border: 1px solid green; */
     position: absolute;
@@ -504,17 +521,19 @@ nav .fly-item {
     width: 60px;
 
 }
-
+/* DQT MENU SINGLE ITEM BEAUTY ELECRTONIC  */
 .dpt-menu>ul>li>a {
+    /* border: 1px solid red; */
     font-size: var(--font-small);
     height: 46px;
     align-items: center;
 }
 
+/* THIS HOVER IS FOR SHOWING HAS CHILD SECTION/EXTRA SECTION LIKE MEGA MENU  */
 .dpt-menu .has-child:hover ul {
     display: block;
 }
-
+/* UNDERLING STYLE FOR BQT MENU EXTRA SECTION  */
 .dpt-menu .has-child li a:hover {
     text-decoration: underline;
 }
@@ -528,11 +547,11 @@ nav .fly-item {
     flex: 1;
     /* border: 1px solid yellow; */
 }
-
+/* THIS FORM IS RELATIVE TO DARK SECTION  */
 form {
     position: relative;
 }
-
+/* FROM SEARCH SECTION STYLE  */
 form.search input {
     line-height: 3.25em;
     padding: 0 7em;
@@ -543,7 +562,7 @@ form.search input {
     font-size: 0.9em;
     font-weight: var(--fw3);
 }
-
+/* THIS STYLE FOR ICON AND SEARCH BUTTON  */
 form.search :where(span, button) {
     position: absolute;
     top: 0;
@@ -552,7 +571,7 @@ form.search :where(span, button) {
     color: var(--light-text-color);
     height: var(--percent100);
 }
-
+/* FORM SEARCH STYLE  */
 form.search button {
     right: 0;
     border: 0;
@@ -566,7 +585,7 @@ form.search button {
     /* transition: var(--trans-background); */
     transition: var(--trans-background-color);
 }
-
+/* FORM STYLE HOVER STYLE  */
 form.search button:hover {
     background-color: var(--dark-color);
 }
@@ -575,8 +594,8 @@ form.search button:hover {
  * 01. HEADER
     e. Responsive MENU - OFF canvas
 *------------------*/
+/* MOBILE SIDE BAR DIV STYLE */
 .site-off {
-    /* border: 1px solid red; */
     position: fixed;
     width: 320px;
     height: 100%;
@@ -588,21 +607,21 @@ form.search button:hover {
     transition: transform .4s, visibility .4s;
     will-change: transform, visibility;
 }
-
+/* MOBILE SIDE BAR DIV STYLE SHOWING SIDE BAR MENU TOGGLE*/
 .showmenu .site-off {
+    /* border: 1px solid red; */
     transform: translateX(0);
     visibility: visible;
     transform: transform .4s 0s, visibility 0s 0s;
 }
-
+/* MOBILE SIDE BAR DIV STYLE SHOWING SIDE BAR */
 .off-canvas {
-    /* border: 1px solid red; */
     width: var(--percent100);
     height: var(--percent100);
     touch-action: pan-x;
     padding: 1.5em;
 }
-
+/* SIDE BAR LOGO SECTION  */
 .off-canvas .canvas-head {
     /* border: 1px solid red; */
     color: var(--white-color);
@@ -612,16 +631,16 @@ form.search button:hover {
     background-color: var(--secondary-dark-color);
     border-bottom-right-radius: 160px 25px;
 }
-
+/* SIDE BAR LOGO  */
 .off-canvas .canvas-head .logo {
     z-index: 10;
     position: relative;
 }
-
+/* SIDE BAR LOGO CIRCLE  */
 .off-canvas .canvas-head .logo .circle {
     opacity: .75;
 }
-
+/* CROSS BUTTON FOR CLOSE STYLE  */
 .t-close {
     font-size: 1.25em;
     width: 32px;
@@ -631,14 +650,15 @@ form.search button:hover {
     color: var(--white-color);
     transition: var(--trans-background-color);
 }
-
+/* CLOSE BUTTON HOVER  */
 .t-close:hover {
     background-color: var(--white-color);
     color: var(--secondary-dark-color);
     opacity: .75;
 }
-
+/* SIDE BAR ALL DEPART MENT SECTION  */
 .off-canvas .dpt-head {
+       /* border: 1px solid red; */
     font-size: var(--font-small);
     padding: 1em;
     margin-bottom: 1em;
@@ -646,7 +666,7 @@ form.search button:hover {
     background-color: var(--light-bg-color);
     border-radius: 7px 7px 0 0;
 }
-
+/* SIDE BAR MENU'S EXTRA CHILE'S UNDER FORT STYLE LIKE MAKEUP , SKIN CARE  */
 .off-canvas .has-child> :where(ul, .mega) {
     font-size: var(--font-small);
     font-weight: var(--fw3);
@@ -658,55 +678,56 @@ form.search button:hover {
     overflow: hidden;
     transition: max-height .3s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
-
+/* SIDE BAR MENU'S EXTRA CHILE TOGGLE STYLE  */
 .off-canvas .expand> :where(ul, .mega) {
     max-height: 2000px;
 }
-
+/* THIS STYLE FOR HEAR TOP SMALL NAV IN SIDE BAR  */
 .off-canvas .thetop-nav ul,
 .off-canvas nav>ul {
+    /* border: 1px solid red; */
     flex-direction: column;
     align-items: flex-start;
     font-size: var(--font-small);
     line-height: 36px;
     padding-top: 1.25em;
     margin: 1.25em 0;
-    border-top: 1px solid var(--border-color);
+    /* border-top: 1px solid var(--border-color); */
 }
-
+/* WOMEN SIDE BAR MEGA SECTION  */
 .off-canvas nav .mega {
-    padding: 0;
+    padding: 0;;
 }
-
+/* NOT SHINING THE PICTURE OF WOMEN MEGA SECTION IN SIDE BAR  */
 .off-canvas nav .mega .products {
+    border: 1px solid red;
     display: none;
 }
-
+/* SIDE BAR EXTRA SECTION TOGGLE ICON STYLE  */
 .off-canvas .has-child .icon-small {
     /* border: 1px solid red; */
     padding: 0.5em;
     line-height: initial;
 }
-
+/* ROTATING THE TOGGLE ICON  */
 .off-canvas .dpt-menu .icon-small i {
     transform: rotate(90deg);
 }
-
+/* SIDE BAR HAS CHILD SECTION  */
 .off-canvas .has-child {
     /* border: 1px solid red; */
     width: var(--percent100);
 }
-
+/* NOT SHOWING THE USD AND ENGLISH SELECTED SECTION  */
 .off-canvas .thetop-nav .right>ul> :where(:nth-child(4), li:nth-child(5))>a {
-    /* border: 1px solid yellow; */
     display: none;
 }
-
+/*USD AND ENGLISH SELECTED SECTION SIDE BAR STYLE  */ 
 .off-canvas .thetop-nav .right ul ul {
     display: flex;
     flex-direction: row;
 }
-
+/*USD AND ENGLISH SELECTED SECTION SIDE BAR STYLE SINGLE ITEM   */
 .off-canvas .thetop-nav .right ul ul li a {
     padding: 0.5em;
     border: 1px solid var(--border-color);
@@ -718,12 +739,12 @@ form.search button:hover {
  * 02. SLIDER
 *------------------*/
 
-
+/* SLIDER MAIN DIV STYLE  */
 .slider .item {
-    /* border: 1px solid red; */
     position: relative;
     height: 474px;
 }
+/* SLIDER BLUR STYLE  */
 .slider .item::before{
     content: '';
     position: absolute;
@@ -737,7 +758,7 @@ form.search button:hover {
     opacity: .9;
 
 }
-
+/* SLIDER TEXT STYLE  */
 .slider .text-content {
     position: relative;
     height: var(--percent100);
@@ -745,6 +766,7 @@ form.search button:hover {
     padding: 0 0 10% 10%;
     z-index: 1;
 }
+/* SLIDER TEXT STYLE H4*/
 .slider h4 {
     font-size: var(--font-small);
     font-weight: var(--fw7);
@@ -757,13 +779,16 @@ form.search button:hover {
 .text-content :where(h2, h3) span:first-child{
     font-weight: var(--fw3);
     color: var(--light-text-color);
+
 }
 .text-content :where(h2,h3) span:last-child{
     color: var(--secondary-dark-color);
     text-transform: uppercase;
     letter-spacing: -1px;
 }
+/* SLIDER TEXT CONTENT  */
 
+/* SLIDER PAGINATION STYLE   */
 .swiper-pagination .swiper-pagination-bullet-active{
     background-color:var(--secondary-dark-color);
 }
@@ -771,12 +796,13 @@ form.search button:hover {
 /*-----------------
  * 02. BRANDS
 *------------------*/
+
 .brands .wrapper {
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 2em 0;
 }
-
+/* BRAND HOVERING STYLE  */
 .brands .item img {
     opacity: .25;
     transition: opacity .3s;
@@ -784,24 +810,29 @@ form.search button:hover {
 .brands .item a:hover img {
     opacity: 1;
 }
+/* BRAND HOVERING STYLE  END*/
 /*-----------------
  * 04. PRODUCT BLOCK STYLE
 *------------------*/
+/* TRENDIGN PRODUCT SECTION  */
 .sectop{
     justify-content: space-between;
     padding-bottom: 0.5em;
     margin-bottom:2em ;
     border-bottom: 1px solid var(--border-color); ;
 }
+/* SECTION TOP H2  */
 .sectop h2{
     position:  relative;
     font-size: 1.5em;
     font-weight: var(--fw7);
 }
+/* SECTION TOP CIRCLE STYLE  */
 .sectop h2 span:not(.circle) {
     padding: 0 0 0 2em;
 }
 
+/* SECTION TOP CIRCLE STYLE  */
 .sectop h2 .circle {
     top: -5px;
 }
@@ -811,19 +842,25 @@ form.search button:hover {
  * 04. PRODUCT BLOCK STYLE
   a. Global Product
 *------------------*/
+/* THIS STYLE FOR OFFERS END DATE STYLE  */
 .products .offer {
     /* border: 1px solid red; */
    text-align: center;
    margin-bottom:1.5em;
 
 }
+/* THIS STYLE OF OFFER TEXT STYLE  */
 .products .offer p{
+    /* border: 1px solid red; */
     text-transform: uppercase;
     margin-bottom: 0.5em;
 }
+/* THIS STYLE FOR Hole OFFER ui  */
 .products .offer ul{
+    /* border: 1px solid red; */
     gap: 1em;
 }
+/* THIS STYLE IS FOR SPECIFIC TIME TEXT  */
 .products .offer ul  li{
     /* border: 1px solid red; */
     position: relative;
@@ -835,23 +872,29 @@ form.search button:hover {
     background-color: var(--light-bg-color);
     border-radius: 5px;
 }
+/* THIS STYLE IS FOR SPECIFIC TIME TEXT COLONE  */
 .products .offer ul li:not(:last-child)::before{
     content: ':';
     position: absolute;
     right: -0.6em;
     color: var(--light-text-color);
 }
+/* THIS IS FOR IMAGE ZOOM ANIMATION  */
 .products :where(.image, .thumbnail) img{
     transition: transform .3s;
 }
+/* THIS IS FOR IMAGE ZOOM ANIMATION  */
 .products :where(.image, .thumbnail):hover img {
     transform: scale(1.1);
 }
+/* THIS STYLE IS FOR IMAGE HOVER ICON  */
 .products .hoverable {
+    /* border: 1px solid red; */
     position: absolute;
     top: 0;
     right: 0;
 }
+/* THIS STYLE IS FOR IMAGE HOVER SINGLE ICON  */
 .products .hoverable li a {
     /* border: 1px solid red; */
     display: flex;
@@ -891,6 +934,11 @@ form.search button:hover {
 .products .hoverable li:last-child{
     transition-delay: .2s;
 }
+/* ALL ABOVE IS IMAGE ICON HOVER  STYLE  */
+
+
+
+/* THIS STYLE IS FOR DISCOUNT LOGO  */
 .products .discount {
     /* border: 1px solid yellow; */
     top: auto;
@@ -900,30 +948,37 @@ form.search button:hover {
     background-color:transparent;
     z-index: 25;
 }
+/* THIS STYLE IS FOR DISCOUNT BACKGROUND COLOR  */
 .products .discount::before{
     background-color: var(--dark-color);
 }
+/* THIS STYLE IS FOR DISCOUNT TEXT   */
 .products .discount span{
     position: relative;
     font-size: var(--font-smaller);
     font-weight: var(--fw5);
     color: var(--white-color);
 }
+/* THIS STYE IS FOR OFFER DIV HOLE CONTENT  */
 .products .content {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
 }
+
+/* THIS STYLE IS FOR ALL PRODUCTS CONTENT  */
 .products:where(.big, .main, .one) .content{
     gap: 1em;
     margin-top: 1.25em;
 }
+/* THIS STYLE IS FOR ALL PRODUCT RATING STAR  */
 .products .rating {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     gap: 0.5em;
 }
+/* THIS STYLE IS FOR SPECIFIC STAR STYLE  */
 .products .rating .stars{
     width: 80px;
     height: 20px;
@@ -935,6 +990,7 @@ form.search button:hover {
 .products .item:where(:nth-child(3), :nth-child(3)) .stars {
     width: 64px;
 }
+/* THIS STYLE IS FOR ALL PRODUCT TITLE  */
 .products h3 {
     font-family: 'Rubik';
     font-size: 1em;
@@ -944,42 +1000,51 @@ form.search button:hover {
     display: -webkit-box;
     -webkit-box-orient: vertical;
 }
+/* THIS STYLE IS FOR ALL PRODUCT TITLE  HOVER*/
 .products h3 a:hover {
     text-decoration: underline;
 }
+/* ALL PRODUCTS PRICE STYLE  */
 .products .price .current {
     font-size: calc(1em+ 1vh);
     color: var(--primary-color);
     margin-right: 0.25em;
 
 }
+/* THIS STYLE IS FOR LINE TROUGH PRICE  */
 .products .price .normal {
     color: var(--light-text-color);
     text-decoration: line-through;
 }
+/* BIG OFFER DIV'S STOCK AND  SOLD style */
 .products .stock .qty{
     display: flex;
     justify-content: space-between;
 }
+/* THIS STYLE IS FOR BIG OFFER BAR STYLE  */
 .products .stock .bar {
     height: 3px;
     margin-top: 1em;
     background-color: var(--border-color);
     overflow: hidden;
 }
+/* THIS STYLE IS FOR BIG OFFER BAR STYLE  SECONDERY COLOR  */
 .products .stock .abailable{
     height: 3px;
     width: 21%;
     background-color: var(--secondary-color);
 
 }
+/* THIS STYLE IS FOR NORMAL PRODUCT DIV  */
 .products .item {
     display: flex;
     position: relative;
 }
+/* ONE PRODUCT STOCK DANGER STYLE  */
 .products .stock-danger {
     color: var(--primary-color);
 }
+/* TRENDING PRODUCTS BOTH ROW  */
 .flexwarp .row {
     flex: 0 0 100%;
     width: 100%;
@@ -989,8 +1054,9 @@ form.search button:hover {
  * 04. PRODUCT BLOCK STYLE
   a. Big Product
 *------------------*/
-
+/* THIS STYLE IS FOR BIG PRODUCT     */
 .products.big .item {
+        /* border: 1px solid red; */
     flex-direction: column;
     padding: 2.5em;
     border: 1px solid var(--secondary-dark-color);
@@ -1002,10 +1068,11 @@ form.search button:hover {
  * 04. PRODUCT BLOCK STYLE
   a. mini product
 *------------------*/
+/* THIS STYLE IS FOR MINI TRENDINT PRODUCTS HOLE CONTENT AND IMG  */
 .products.mini .item {
-    border: 1px solid yellow;
     margin-bottom: 2em;
 }
+/* THIS STYE IS FOR MINI PRODUCTS MEDIA MEANS IMAGE  */
 .products.mini .media {
     /* border: 1px solid red; */
     border-radius: 0;
@@ -1013,11 +1080,13 @@ form.search button:hover {
     height: 165px;
     margin-right: 1.25em;
 }
+/* THIS STYLE IS FOR MINI PRODUCTS CONTENT  */
 .products.mini .content{
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     margin: 0;
     gap: 0.75em;
 }
+/* MINI PRODICT FONT WEIGHT  */
 .products:where(.mini, .main) h3{
     font-weight: 400;
 }
@@ -1029,17 +1098,19 @@ form.search button:hover {
 /* .features .item{
     flex-wrap: wrap;
 } */
+/* FEATURED PRODUCT HOLE CONTEN STYE   */
 .products.main .item {
     flex-direction: column;
     flex: 0 0 100%;
     padding: 0 0.938em;
 
 }
+/* FEATURED PRODUCT MEDIA MEANS IMAGE  */
 .products.main .media{
     height: 390px;
 }
+/* FEATURED AFTER HOVER STYLE */
 .products.main .footer {
-    border: 1px solid yellow;
     position: absolute ;
     left: 0;
     right: 0;
@@ -1052,10 +1123,12 @@ form.search button:hover {
     will-change: opacity;
     transition: all .2s ease-in-out;
 }
+/* FEATURED AFTER HOVER STYLE  HOLE DIV*/
 .products.main .item:hover .footer {
     opacity: 1;
     visibility: visible;
 }
+/* AFTER HOVER UL CONTENT  */
 .products.main .footer ul {
     list-style: disc;
     padding: 1.25em 0 0 1.25em;
@@ -1063,28 +1136,34 @@ form.search button:hover {
     border-top: 1px solid var(--border-color);
     margin-top: 145px;
 }
+/* AFTER HOVER TITLE STYLE  */
 .products.main .item:hover .content > *:not(.footer){
+
     z-index: 3;
 }
-
+/* ALL IMAGE FILL STYLE  */
 .features .object-cover a img{ 
     object-fit: fill;
 }
 /*-----------------
  * 05. BANNER
 *------------------*/
+/* ALL BANNER ITEMS  */
 .banners .item {
     margin-top: 3em;
     position: relative;
     background-color: var(--white-color);
-    border: 1px solid var(--border-color);
+    /* border: 1px solid var(--border-color); */
 }
+/* BANNER IMAGE ALIGN */
 .banners .image {
     text-align: right;
 }
+/* SECOND BANNER BACKGROUND COLOR  */
 .banners .get-gray{
     background-color: var(--border-color);
 }
+/* TOP  TWO BANNER'S DIV  */
 .banners :where(.text-content, .over-link){
    position: absolute; 
    top: 0;
@@ -1092,35 +1171,45 @@ form.search button:hover {
    width: var(--percent100);
    height: var(--percent100);
 }
+/* THIS STYLE IS FOR TOP BANNERS TEXT-CONTENT PADDING  */
 .banners .text-content {
     padding: 1.5em 2.5em;
 }
+/* TOP BANNERS TEXT-CONTENT H3 STYLE  */
 .banners h3 {
     font-size: calc(1em + 0.5vh);
     font-weight: var(--fw3);
 }
+/* TOP BANNERS TEXT-CONTENT H3 > SPAN STYLE  */
 .banners h3 span {
     font-size: 80%;
 }
+/* BANNERS BUTTON  */
 .banners .primary-button {
     z-index: 3;
 }
+/* PRODUCT BANNERS CONTENT FLEX STYLE  */
 .banners .product-categories .item {
     display: flex;
     padding: 1.5em;
 }
+/* PRODUCT BANNERS IMAGE WIDTH STYLE  */
 .banners .product-categories .image {
     max-width: 150px;
 }
+/* THIS STYLE IS FOR SHOT LINKS OF PRODUCT BANNERS AND FOOTER  */
 .mini-links ul{
     font: var(--font-small);
     color: var(--light-text-color);
+    /* color: red; */
     margin-top: 1em;
 }
+/* PRODUCTS BANNER VIEW ALL STYLE  */
 .banners .second-links {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-top: 2em;
 }
+/* THIS STYLE IS FOR SHOT LINKS OF PRODUCT BANNERS AND FOOTER HOVER UNDER LINE STYLE*/
 .mini-links li a:hover {
     text-decoration: underline;
 }
@@ -1132,22 +1221,28 @@ form.search button:hover {
  * 05. FOOTER
     a. News Letter
 *------------------*/
+/* NEWS LETTER WHOLE SECONDERY COLOR DIV  */
 .newsletter{
+        /* border: 1px solid red; */
     padding: 2.5em 0;
     background-color: var(--dark-color);
-    color: var(--white-color);
+    color: var(--white-color);    /*TEXT COLOR*/
 }
+/* NEWS LETTER H3  */
 .newsletter h3 {
     font-size: 1.5em;
 }
+/* NEWS LETTER  P    */
 .newsletter p {
     font-weight: var(--fw3);
     color: var(--border-color);
     margin: 0.5em 0 1.5em;
 }
+/* NESW LETTER STRONG P    */
 .newsletter p strong {
     color: var(--primary-color);
 }
+/* NEWS LETTER FORM STYLE  */
 .newsletter form{
     max-width: 500px;
     width: var(--percent100);
@@ -1156,6 +1251,7 @@ form.search button:hover {
  * 05. FOOTER
     a. Widgets
 *------------------*/
+/* FOOTER MAIN DIV  */
 .widgets {
     padding: 3.5em 2.5em;
     background-color: var(--light-bg-color);
@@ -1164,13 +1260,19 @@ form.search button:hover {
  * 05. FOOTER
   ===> footer info
 *------------------*/
+/* FOOTER LOGO DIV  */
 .footer-info{
+        /* border: 1px solid red; */
     padding: 3.5em 0 5em;
 }
+/* FOOTER INFO  DIV FLEX DIR  */
 .footer-info .wrapper .flexcol{
+    /* border: 1px solid red; */
     align-items: center;
 }
+/* FOOTER SOCIAL MEDIA LOGO  */
 .footer-info ul li a {
+    /* border: 1px solid red; */
     font-size: 1.25em;
     display: flex;
     align-items: center;
@@ -1182,13 +1284,15 @@ form.search button:hover {
     margin: 0.25em;
     transition: var(--trans-background);
 }
+/* FOOTER SOCIAL MEDIA LOGO HOVER*/
 .footer-info ul li a:hover {
     background-color: var(--border-color);
 }
-
+/* FOOTER LOGO  */
 .footer-info .logo a {
     margin: 0 0 1em -0.75em;
 }
+/* FOOTER COPY RIGHT TEXT  */
 .footer-info .mini-text{
     margin-top: 2em;
     text-align: center;
@@ -1197,6 +1301,7 @@ form.search button:hover {
 /*-----------------
  * 05. BOTTOM MENU
 *------------------*/
+/* BOTTOM MENU STYLE STARTS  */
 .menu-bottom {
   position: fixed;  
   left: 0;
@@ -1235,10 +1340,12 @@ form.search button:hover {
     margin-right: -20px;
     background-color: var(--secondary-dark-color);
 }
+/* BOTTOM MENU STYLE STARTS  */
 /*-----------------
  * 05. BOTTOM MENU
    ----> Search
 *------------------*/
+/* BOTTOM SEARCH STARTS  */
 .search-bottom{
     position: fixed;
     bottom: 60px;
@@ -1262,10 +1369,12 @@ form.search button:hover {
 .search-bottom .t-close:hover{
     background-color: var(--primary-color);
 }
+/* BOTTOM SEARCH END'S   */
 
 /*-----------------
  * 07. OVARLAY
 *------------------*/
+/* OVER LAY FOR SIDE BAR MENU START'S */
 .overlay {
    position: fixed; 
    width: var(--percent100);
@@ -1282,15 +1391,41 @@ form.search button:hover {
     opacity: 1;
     visibility: inherit;
 }
+/* OVER LAY FOR SIDE BAR MENU END'S */
+/*-----------------
+ * 08. Page single 
+*------------------*/
+
+/* All Department Menu Icon  */
+.page-home .dpt-cat .dpt-trigger,
+.dpt-trigger .ri-close-line,
+.showdpt .dpt-trigger .ri-menu-3-line
+{
+    display: none;
+}
+.showdpt .dpt-trigger .ri-close-line {
+    display: block;
+}
+
+
+
+
+
 /*-----------------
  * 15. RESPOSVIVE
 *------------------*/
 @media screen and (min-width: 481px) {
+    /* body {
+        background-color: red;
+    } */
     .products.main .item {
         flex: 0 0 50%;
     }
 }
 @media screen and (min-width: 768px){
+    /* body {
+            background-color:green;
+        } */
     .products .price .current {
         font-size: 1.25em;
     }
@@ -1306,6 +1441,9 @@ form.search button:hover {
 
 
 @media only screen and (min-width: 992px) {
+    /* body {
+            background-color: yellow;
+        } */
     .container {
         padding: 0 2em;
     }
@@ -1526,7 +1664,7 @@ form.search button:hover {
     }
 
     .products.big .media {
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
     .products.main .item,
     .widgets .row {
@@ -1538,4 +1676,12 @@ form.search button:hover {
         justify-content: space-between;
         align-items: center;
     }
+
+     /* Page Single  */
+     #page:not(.page-home) .dpt-menu {
+        display: none;
+     }
+     #page.showdpt .dpt-menu {
+        display: block;
+     }
 }

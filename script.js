@@ -69,5 +69,18 @@ searchButton.addEventListener('click', function (e) {
 tClose.addEventListener('click', function (e) {
     e.preventDefault();
     showClass.classList.remove('showsearch');
-})
+});
+
+
+// show dpt menu
+
+const dptButton = document.querySelector('.dpt-cat .dpt-trigger'),
+    dptClass = document.querySelector('.site');
+
+dptButton.addEventListener('click', function (e) {
+    e.preventDefault();
+   dptClass.classList.toggle('showdpt') 
+});
+
+
 
