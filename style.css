@@ -1029,7 +1029,7 @@ form.search button:hover {
     overflow: hidden;
 }
 /* THIS STYLE IS FOR BIG OFFER BAR STYLE  SECONDERY COLOR  */
-.products .stock .abailable{
+.products .stock .available{
     height: 3px;
     width: 21%;
     background-color: var(--secondary-color);
@@ -1751,6 +1751,47 @@ form label {
     margin-bottom: 0.5em;
     text-transform: uppercase;
 }
+
+/* PAGE SINGLE : SPACIAL OFFER  */
+.page-single .stock {
+
+    margin: 2em 0;
+}
+.page-single .stock .qty span:last-child {
+    color: initial;
+}
+.single-product .stock .bar {
+    border: 0.1px solid red;
+    height: 10px;
+}
+.page-single .stock .bar .available {
+    margin: 0;
+    border-radius: 0;
+    background-color: var(--secondary-dark-color);
+}
+
+.related-products .content {
+    height: var(--percent100);
+}
+.related-products .offer {
+
+    margin: 0;
+}
+.related-products .offer p {
+    margin: 0 1em 0 0;
+    text-transform: none;
+    line-height: 1;
+}
+.related-products .offer ul li {
+    width: 28px;
+    height: 28px;
+    font-size: var(--font-small);
+    padding: 0.5em 0.25em;
+}  
+.related-products .content .stock {
+    /* border: 0.1px solid red; */
+    margin-top: auto;
+} 
 /*-----------------
  * 15. RESPOSVIVE
 *------------------*/
@@ -2022,9 +2063,9 @@ form label {
         flex: 0 0 33.3333%;
     }
 
-    .products.big .media {
-        /* border: 1px solid red; */
-    }
+    /* .products.big .media {
+        border: 1px solid red;
+    } */
     .products.main .item,
     .widgets .row {
         flex: 0 0 25%;

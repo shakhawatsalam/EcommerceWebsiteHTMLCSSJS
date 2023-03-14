@@ -79,12 +79,12 @@ const dptButton = document.querySelector('.dpt-cat .dpt-trigger'),
 
 dptButton.addEventListener('click', function (e) {
     e.preventDefault();
-   dptClass.classList.toggle('showdpt') 
+    dptClass.classList.toggle('showdpt')
 });
 
 
 // product image slider
-var productThumb = new Swiper ('.small-image', {
+var productThumb = new Swiper('.small-image', {
     loop: true,
     spaceBetween: 10,
     slidesPerView: 3,
@@ -96,7 +96,7 @@ var productThumb = new Swiper ('.small-image', {
         }
     }
 });
-var productBig = new Swiper ('.big-image', {
+var productBig = new Swiper('.big-image', {
     loop: true,
     autoHeight: true,
     navigation: {
@@ -108,4 +108,19 @@ var productBig = new Swiper ('.big-image', {
     }
 });
 
+
+// stock products bar width percentage
+var stocks = document.querySelectorAll('.products .stock');
+// console.log(stocks[0].dataset.stock)
+
+for (let x = 0; x < stocks.length; x++) {
+    // console.log(x)
+    let stock = stocks[x].dataset.stock,
+        available = stocks[x].querySelector('.qty-available').innerHTML,
+        sold = stocks[x].querySelector('.qty-sold').innerHTML;
+    percent = sold * 100 / stock;
+    // console.log(stock)
+
+    stocks[x].querySelector('.available').style.width = percent + '%';
+}
 
