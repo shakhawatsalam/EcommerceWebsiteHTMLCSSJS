@@ -701,7 +701,7 @@ form.search button:hover {
 }
 /* NOT SHINING THE PICTURE OF WOMEN MEGA SECTION IN SIDE BAR  */
 .off-canvas nav .mega .products {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: none;
 }
 /* SIDE BAR EXTRA SECTION TOGGLE ICON STYLE  */
@@ -1801,7 +1801,7 @@ form label {
 .single-category .sidebar,
 .single-category .section 
 {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     flex: 1 0 100%;
 }
 
@@ -1938,7 +1938,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 :where(.item-sortir, .item-options) .label,
 .cat-navigation ul {
-     border: 1px solid red;
+     /* border: 1px solid red; */
      color: var(--light-text-color);
      background-color: var(--light-bg-color);
      cursor: pointer;
@@ -1988,14 +1988,14 @@ input[type="range"]::-webkit-slider-thumb {
     visibility: visible;
     opacity: 1;
 }
-:is(.mini-cart .products, .products.cart) img {
+:is(.mini-cart .products, .products.cart, .checkout .products) img {
     transform: none;
 }
 .mini-cart ul :where(li, .price){
     position: relative;
 }
 .mini-cart .content {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: var(--percent100);
     height: var(--percent100);
     touch-action: auto;
@@ -2015,7 +2015,7 @@ input[type="range"]::-webkit-slider-thumb {
     max-height: 450px;
     overflow: auto;
 }
-:where(.mini-cart, .products.cart) .thumbnail {
+:where(.mini-cart, .products.cart, .checkout) .thumbnail {
     position: relative;
     width: 80px;
     height: 80px;
@@ -2084,7 +2084,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 }
 .products.cart table td :where(.content, .qty-control, p) {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: 0;
     padding: 0;
 }
@@ -2105,7 +2105,7 @@ input[type="range"]::-webkit-slider-thumb {
     border-bottom: 1px  solid  var(--border-color);
 }
 .cart-summary {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: var(--percent100);
     margin: 2.5em 0 4em;
 
@@ -2210,6 +2210,135 @@ input[type="range"]::-webkit-slider-thumb {
     margin-top: 2em;
     font-size: 1.25em;
 }
+.checkout {
+    border: 1px solid red;
+    margin: 5em 0;
+}
+.checkout  .left {
+    padding: 4em;
+    background-color: var(--light-bg-color);
+    box-shadow: 0 15px 70px -8px rgb(0 0 0 / 20%);
+}
+.checkout .item {
+   width: var(--percent100); 
+}
+
+.checkout .left h1 {
+    font-weight: var(--fw3);
+    margin-bottom: 1.5em;
+}
+.checkout .left label {
+    font-size: var(--font-small);
+    text-transform: capitalize;
+    position: relative;
+    width: fit-content;
+}
+.checkout .left label span {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 6px;
+    height: 6px;
+    background-color: var(--primary-color);
+    border-radius: var(--percent50);
+}
+
+.checkout p :where(input, textarea){
+    background-color: rgb(255 255 255/ 50%);
+    font-family: inherit;
+}
+.checkout p input:focus{
+    background-color: var(--white-color);
+}
+.checkout p.checkset {
+    flex-direction: row;
+}
+.checkout p.checkset label {
+    margin: 0 0 0 1em;
+    cursor: pointer;
+}
+.checkout h2{
+    padding-top: 0.5em;
+    margin-bottom: 0.75em;
+    border-top: 1px solid var(--border-color);
+}
+
+.primary-checkout button {
+    display: block;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    width: var(--percent100);
+    max-width: 280px;
+    font-size: 1.2em;
+    margin: 3em auto 0;
+}
+
+.checkout .item.right{
+   padding: 5em  0 0; 
+}
+.summary-totals ul {
+    max-width: 355px;
+    line-height: 2;
+    margin-bottom: 3em;
+    padding-bottom: 3em;
+    border-bottom: 1px solid var(--secondary-dark-color);
+}
+
+.summary-totals li {
+    display: flex;
+    justify-content: space-between;
+    font-weight: var(--fw5);
+}
+
+.summary-totals  li strong {
+    font-size: 2.5em;
+    line-height: 1;
+}
+.summary-totals li:not(:last-child) span:first-child{
+    border: 1px solid red;
+    color: var(--light-text-color);
+}
+
+.summary-order .price{
+    display: flex;
+    flex-direction: column;
+    color: var(--light-text-color);
+    font-size: 0.85em;
+    margin-top: 0.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*-----------------
  * 15. RESPOSVIVE
 *------------------*/
@@ -2253,7 +2382,7 @@ input[type="range"]::-webkit-slider-thumb {
         max-width: var(--percent100);
     }
     #cart-table tbody tr td:last-child {
-        border: 1px solid red;
+        /* border: 1px solid red; */
         position: absolute;
         top: 0;
         right: 0;
@@ -2269,7 +2398,8 @@ input[type="range"]::-webkit-slider-thumb {
     }
     .products.mini,
     .banners .row,
-    .widgets .row {
+    .widgets .row,
+    .checkout .item {
         flex: 0 0 50%;
     }
     .products.main .item {
@@ -2285,6 +2415,10 @@ input[type="range"]::-webkit-slider-thumb {
         position: sticky;
         top: 2em;
     }
+    .checkout .item.right{
+        padding: 5em 0 0 5em;
+    }
+
 }
 
 
