@@ -2296,7 +2296,6 @@ input[type="range"]::-webkit-slider-thumb {
     line-height: 1;
 }
 .summary-totals li:not(:last-child) span:first-child{
-    border: 1px solid red;
     color: var(--light-text-color);
 }
 
@@ -2310,6 +2309,46 @@ input[type="range"]::-webkit-slider-thumb {
 
 
 
+/* MODAL  STYLING  */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 600px;
+    width: 90%;
+    height: max-content;
+    padding: 2em;
+    margin: auto;
+    text-align: center;
+    background-color: var(--light-bg-color);
+    z-index: 1000;
+}
+
+.modal .image{
+    position: relative;
+    height: calc(150px + 10vh);
+    overflow: hidden;
+    max-height: 400px;
+    margin: -2em -2em 0 -2em;
+}
+.modal h2 {
+    font-size: 1.75em;
+    text-transform: uppercase;
+    max-width: 300px;
+    margin:  0.5em auto;
+    line-height: 1;
+}
+.modal p {
+    margin-bottom: 1em;
+    color: var(--light-text-color);
+}
+.modal .t-close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
 
 
 
